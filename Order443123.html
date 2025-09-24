@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Gift Card - $200</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1b2838 0%, #2a475e 100%);
+            color: #c7d5e0;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background-color: rgba(42, 71, 94, 0.7);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #66c0f4;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .success-icon {
+            font-size: 4rem;
+            color: #5ba32b;
+            margin: 20px 0;
+        }
+        
+        .gift-card {
+            background: linear-gradient(135deg, #171a21 0%, #2a475e 100%);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 2px solid #66c0f4;
+            position: relative;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .gift-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #4c6b22, #5ba32b, #66c0f4, #5ba32b, #4c6b22);
+        }
+        
+        .gift-card-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.g2a.com/1024x576/1x1x1/steam-gift-card-500-usd-steam-key-united-states-i10000083400263/5c2ca0a35bafe37d281b1883');
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .gift-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #66c0f4;
+        }
+        
+        .gift-card .amount {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #5ba32b;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .code-section {
+            background-color: rgba(27, 40, 56, 0.9);
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 15px;
+            border: 1px dashed #66c0f4;
+        }
+        
+        .code-section h4 {
+            margin-bottom: 10px;
+            color: #c7d5e0;
+            font-size: 1rem;
+        }
+        
+        .code {
+            font-family: 'Courier New', monospace;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            background: rgba(0,0,0,0.3);
+            padding: 10px;
+            border-radius: 4px;
+            word-break: break-all;
+            color: #5ba32b;
+            font-weight: bold;
+        }
+        
+        .instructions {
+            background-color: rgba(27, 40, 56, 0.7);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        
+        .instructions h2 {
+            color: #66c0f4;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .instructions ol {
+            margin-left: 20px;
+            line-height: 1.6;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+        }
+        
+        .navigation {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .nav-btn {
+            background: linear-gradient(135deg, #4c6b22 0%, #5ba32b 100%);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .nav-btn:hover {
+            background: linear-gradient(135deg, #5ba32b 0%, #6bb835 100%);
+            transform: scale(1.05);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .gift-card-image {
+                height: 150px;
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h1>Gift Card Successfully Redeemed!</h1>
+            <p>Your Steam wallet has been credited with a $200 gift card</p>
+        </div>
+        
+        <div class="gift-card">
+            <div class="gift-card-image">$200</div>
+            <h3>Steam Gift Card</h3>
+            <div class="amount">$200</div>
+            <div class="code-section">
+                <h4>Your Gift Code:</h4>
+                <div class="code">5F3A-8B2C-9D1E</div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h2>How to use your Steam Wallet funds:</h2>
+            <ol>
+                <li>Open the Steam client or go to the Steam website</li>
+                <li>Log in to your Steam account</li>
+                <li>Go to your account details or wallet section</li>
+                <li>Your balance should now show the added funds</li>
+                <li>You can now purchase games, DLC, or in-game items</li>
+            </ol>
+        </div>
+        
+     
+    </div>
+    
+    <div class="footer">
+        <p>Steam is a registered trademark of Valve Corporation. This page is for demonstration purposes only.</p>
+    </div>
+</body>
+</html>
